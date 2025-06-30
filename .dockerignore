@@ -1,0 +1,6 @@
+Dockerfile
+docker-compose.yaml
+.git/   # when using git . need to know more about this
+.vscode/
+*.log
+*.md

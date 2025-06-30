@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  chaisite:
+    build:
+      context: .
+    container_name: chai-cont
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro  # Mount certs into container (read-only)
+ 
