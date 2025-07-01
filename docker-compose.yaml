@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   chaisite:
+    image: chai-img:latest
     build:
       context: .
     container_name: chai-cont
