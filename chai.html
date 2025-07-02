@@ -1,76 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Stylish Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chai Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      height: 100vh;
-      width: 100vw;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      background-color: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      max-width: 500px;
-      width: 90%;
-    }
-
-    h1 {
+      background: #f5f5f5;
       color: #333;
-      margin-bottom: 20px;
+      line-height: 1.6;
     }
 
-    p {
-      color: #555;
-      font-size: 18px;
-      margin-bottom: 20px;
+    header {
+      background: #6f42c1;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
     }
 
-    a {
-      display: inline-block;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #563d7c;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
-      background-color: #007acc;
-      color: white;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .cta {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
       padding: 10px 20px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      background: #6f42c1;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
     }
 
-    a:hover {
-      background-color: #005f99;
+    .cta a:hover {
+      background: #563d7c;
     }
 
-    img {
-      margin-top: 21px;
-      width: 99%;
-      border-radius: 8px;
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .cta h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Chai bna de</h1>
-    <p>Look at this for a more advanced chai recipe</p>
-    <a href="https://www.youtube.com/watch?v=2KI-PGM7PYQ&pp=ygULY2hhaSByZWNpcGXSBwkJvgkBhyohjO8%3D" target="_blank">Visit Example</a>
-    <img src="data:image.3+6./jpeg;base64,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" alt="Example Image">
-  </div>
+  <header>
+    <h1>Welcome to Chai Site</h1>
+    <p>Simple. Clean. Beautiful.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="cta">
+      <h2>About This Site</h2>
+      <p>This website is deployed using Docker, Jenkins, and Nginx — showcasing CI/CD and DevOps in action.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="cta">
+      <h2>My Projects</h2>
+      <p>Explore more projects on <a href="https://github.com/AdityaMittal12" target="_blank">GitHub</a>.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <h2>Contact Me</h2>
+      <a href="mailto:your-email@example.com">📧 Send Email</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Chai Site | Built with ❤️ by Aditya Mittal
+  </footer>
 
 </body>
 </html>
