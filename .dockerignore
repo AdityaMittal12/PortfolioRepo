@@ -4,3 +4,5 @@ docker-compose.yaml
 .vscode/
 *.log
 *.md
+Jenkinsfile
+portfolio
