@@ -1,6 +1,6 @@
 Dockerfile
 docker-compose.yaml
-.git/   # when using git . need to know more about this
+.git/ 
 .vscode/
 *.log
 *.md
