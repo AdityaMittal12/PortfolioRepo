@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   chaisite:
-    image: chai-img:latest
     build:
       context: .
+    image: chai-img:latest
     container_name: chai-cont
     ports:
       - "80:80"
