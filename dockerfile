@@ -5,7 +5,8 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy your HTML and static files to Nginx directory
-COPY ./Portfolio/index.html /usr/share/nginx/html
+COPY ./Portfolio/index.html /usr/share/nginx/html/index.html
+COPY ./Portfolio/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
