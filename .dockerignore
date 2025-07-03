@@ -5,4 +5,3 @@ docker-compose.yaml
 *.log
 *.md
 Jenkinsfile
-portfolio
