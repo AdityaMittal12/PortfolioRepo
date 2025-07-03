@@ -5,7 +5,7 @@ services:
     build:
       context: .
     image: chai-img:latest
-    container_name: chai-cont
+    container_name: chai-cont1
     ports:
       - "80:80"
       - "443:443"
