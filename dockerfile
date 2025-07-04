@@ -1,7 +1,7 @@
 # Use the official Nginx image
 FROM nginx:alpine
 
-# Remove the default static files in Nginx
+#Remove the default static files in Nginx
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy your HTML and static files to Nginx directory
