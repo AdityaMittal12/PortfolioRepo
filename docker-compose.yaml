@@ -4,8 +4,8 @@ services:
   chaisite:
     build:
       context: .
-    image: chai-img:latest
-    container_name: chai-cont1
+    image: portfolio-img:latest
+    container_name: portfolio-cont
     ports:
       - "80:80"
       - "443:443"
