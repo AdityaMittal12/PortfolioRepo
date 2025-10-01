@@ -10,14 +10,14 @@ pipeline {
                     branch:"slave",
                     credentialsId: "github-creds-chai"
                     )
-                echo "code cloned successfully!"
+                echo "code cloned successfully!!"
             }
         }
         stage ("Build & Deploy") {
             steps {
                 echo "Building and Deploying the portfolio site"
-                sh "sudo docker compose down"
                 sh "sudo docker rm -f portfolio-cont || true"
+                sh "sudo docker compose down"
                 sh "sudo docker compose up --build -d" 
                 sh "sudo docker image prune -f"
                 echo "portfolio site deployed"
