@@ -17,6 +17,7 @@ pipeline {
             steps {
                 echo "Building and Deploying the portfolio site"
                 sh "sudo docker compose down"
+                sh "sudo docker rm -f portfolio-cont || true"
                 sh "sudo docker compose up --build -d" 
                 sh "sudo docker image prune -f"
                 echo "portfolio site deployed"
