@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("clone") {
             steps {
-                echo "code is cloning from Github"
+                echo "code is cloning from Github!"
                 git (
                     url : "https://github.com/AdityaMittal12/PortfolioRepo.git" , 
                     branch:"slave",
