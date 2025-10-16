@@ -25,7 +25,7 @@ pipeline {
         }
         stage ("Push to Docker Hub"){
             steps { 
-                echo "Pushing image to Docker Hub"
+                echo "Pushing image to Docker Hub!"
                 withCredentials([usernamePassword(credentialsId: 'dockerhubCred', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]){
                 sh "sudo docker login -u ${env.DOCKER_USER} -p ${env.DOCKER_PASS}" 
                 sh "sudo docker image tag portfolio-img:latest adityam18/portfolio-img:latest"
