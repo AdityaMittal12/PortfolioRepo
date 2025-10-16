@@ -10,7 +10,7 @@ pipeline {
                     branch:"slave",
                     credentialsId: "github-creds-chai"
                     )
-                echo "code cloned successfully!"
+                echo "code cloned successfully"
             }
         }
         stage ("Build & Deploy") {
