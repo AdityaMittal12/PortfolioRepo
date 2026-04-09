@@ -13,6 +13,7 @@ pipeline {
                 echo "code cloned successfully"
             }
         }
+
         stage ("Build & Deploy") {
             steps {
                 echo "Building and Deploying the portfolio site"
@@ -23,6 +24,7 @@ pipeline {
                 echo "portfolio site deployed"
             }
         }
+
         stage ("Push to Docker Hub"){
             steps { 
                 echo "Pushing image to Docker Hub!"
@@ -33,5 +35,6 @@ pipeline {
                 }
             }
         }
+        
     }
 }
