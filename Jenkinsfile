@@ -15,7 +15,7 @@ pipeline {
         stage("Build Image") {
             steps {
                 echo "Building Docker image"
-                sh "sudo docker build -t portfolio-img ."
+                sh "docker build -t portfolio-img ."
             }
         }
 
