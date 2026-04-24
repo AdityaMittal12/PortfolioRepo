@@ -152,39 +152,6 @@
 						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'Student  ',
-						'Data Analyst  ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
 						<br>
 						<br>
 			            <h2>A DevOps engineer</h2>
@@ -666,5 +633,33 @@
   
   <script src="js/main.js"></script>
     
+ <script>
+(function () {
+    const typingAnimationElement = document.getElementById('typing-animation');
+
+    if (!typingAnimationElement) return;
+
+    const typingTexts = ['Engineer', 'Student', 'Data Analyst'];
+
+    function playTypingAnimation(text) {
+        typingAnimationElement.textContent = "";
+
+        for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+                typingAnimationElement.textContent += text[i];
+            }, i * 200);
+        }
+
+        setTimeout(() => {
+            playTypingAnimation(
+                typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]
+            );
+        }, text.length * 200 + 500);
+    }
+
+    playTypingAnimation(typingTexts[0]);
+})();
+</script>
+
   </body>
 </html>
