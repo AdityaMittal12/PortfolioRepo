@@ -43,6 +43,7 @@ pipeline {
 
                 # Apply manifests
                 kubectl apply -f k8s/
+                kubectl rollout restart deployment portfolio-deployment
                 '''
                 }
             }
