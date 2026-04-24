@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'portfolio' }
+    agent any
 
     stages {
 
