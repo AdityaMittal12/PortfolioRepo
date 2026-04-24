@@ -30,12 +30,21 @@ pipeline {
             }
         }
 
-        stage("Deploy to Kubernetes") {
+         stage("Deploy to Kubernetes") {
             steps {
-                echo "Deploying to Kubernetes"
-                sh "kubectl apply -f k8s/"
-                sh "kubectl rollout restart deployment portfolio-deployment"
+                 sh '''
+                export KUBECONFIG=/home/ec2-user/.kube/config
+
+                # Ensure Minikube is running
+                minikube status || minikube start --driver=docker
+
+                # Set correct context
+                kubectl config use-context minikube
+
+                # Apply manifests
+                kubectl apply -f k8s/
+                '''
+                }
             }
-        }
     }
 }
