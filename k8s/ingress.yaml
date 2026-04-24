@@ -4,7 +4,7 @@ metadata:
   name: portfolio-ingress
 spec:
   rules:
-  - host: adityamittal.xyz
+  - host: adityamittal.xyz 
     http:
       paths:
       - path: /
